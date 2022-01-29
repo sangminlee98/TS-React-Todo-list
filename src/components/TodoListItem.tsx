@@ -7,9 +7,11 @@ import {
 } from 'react-icons/md';
 import cn from 'classnames';
 import { Todos } from '../App';
-
-const TodoListItem = (props: {todo: Todos}) => {
-  const {text, checked} = props.todo;
+type Props = {
+  todo: Todos;
+}
+const TodoListItem = ({todo}: Props) => {
+  const {text, checked} = todo;
   return (
     <div className='TodoListItem'>
       <div className={cn('checkbox',{checked})}>
